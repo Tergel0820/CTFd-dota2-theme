@@ -11,6 +11,7 @@
                 </a>
                 <div class="dota2-navbar-brand-line"></div>
             </div>
+            <div class="dota2-navbar-brand-line" style="width: 120px;"></div>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#base-navbars"
                 aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,7 +112,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('auth.logout') }}">
+                        <a class="nav-link dota2-nav-link-sign-out" href="{{ url_for('auth.logout') }}">
                             <span class="d-block" data-toggle="tooltip" data-placement="bottom" title="Logout">
                                 <i class="fas fa-sign-out-alt d-none d-md-block d-lg-none"></i>
                             </span>

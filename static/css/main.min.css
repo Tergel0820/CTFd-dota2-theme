@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+@font-face {
+    font-family: Radiance-regular;
+    src: url("../fonts/radiance-regular.otf");
+}
+
 .hljs {
     display: block;
     overflow-x: auto;
@@ -150,8 +155,10 @@ main {
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    --font-family-sans-serif: Radiance-regular;
+    --font-family-monospace: Radiance-regular;
+    /* --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace */
 }
 
 *,
@@ -161,7 +168,7 @@ main {
 }
 
 html {
-    font-family: sans-serif;
+    font-family: Radiance-regular !important;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
@@ -182,7 +189,6 @@ section {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -317,7 +323,8 @@ code,
 kbd,
 pre,
 samp {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    /* font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; */
+    font-family: Radiance-regular !important;
     font-size: 1em
 }
 
@@ -4126,20 +4133,36 @@ input[type=submit].btn-block {
     display: block;
     color: #757a82 !important;
     text-shadow: none;
+    padding: 4px;
+    padding-bottom: 2px;
     transition: color 0.15s, text-shadow 0.15s
 }
 
 .dota2-nav-link-slash {
-    width: 2px;
+    width: 1px;
     height: 56px;
-    background-color: #000000;
     transform: rotate(14deg);
-    box-shadow: 0 0 2px 0 #464646;
+    box-shadow: 2px 0 5px 0 #555, -2px 0 5px 0 #000;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .nav-link:hover {
     color: #cad7f5 !important;
-    text-shadow: 0 0 10px #4e76bf !important;
+    text-shadow: 0 0 10px #4e76bf;
+}
+
+.dota2-nav-link-sign-out {
+    color: #ee4136 !important;
+    opacity: 0.5;
+    text-shadow: none;
+    transition: opacity 0.15s, text-shadow 0.15s;
+}
+
+.dota2-nav-link-sign-out:hover {
+    opacity: 1;
+    color: #ee4136 !important;
+    text-shadow: 0 0 10px #ff0000;
 }
 
 .nav-link:focus,
@@ -4162,14 +4185,12 @@ input[type=submit].btn-block {
 }
 
 .nav-tabs .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem
+    border: 1px solid transparent
 }
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
-    border-color: #ee4136
+    border-color: none
 }
 
 .nav-tabs .nav-link.disabled {
@@ -4271,6 +4292,7 @@ input[type=submit].btn-block {
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0 0 6px #000);
+    z-index: 1;
 }
 
 .dota2-navbar-brand-line {
@@ -4278,7 +4300,7 @@ input[type=submit].btn-block {
     bottom: 0;
     width: 100px;
     height: 2px;
-    background-color: #9b7153;
+    background-color: rgb(115, 62, 50);
 }
 
 .navbar-brand:focus,
@@ -5852,9 +5874,9 @@ a.close.disabled {
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #171923;
+    background-image: linear-gradient(#262b2e, #121617);
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 2px solid #43494b;
     border-radius: .3rem;
     outline: 0
 }
@@ -5969,7 +5991,8 @@ a.close.disabled {
     z-index: 1070;
     display: block;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: Radiance-regular !important;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6092,7 +6115,8 @@ a.close.disabled {
     left: 0;
     z-index: 1060;
     max-width: 276px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: Radiance-regular !important;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -9573,7 +9597,8 @@ button.bg-dark:hover {
 }
 
 .text-monospace {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace!important
+    font-family: Radiance-regular !important;
+    /* font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace!important */
 }
 
 .text-justify {
@@ -9889,8 +9914,9 @@ a.text-dark:hover {
 }
 
 .award-icon {
-    font-family: Font Awesome\ 5 Free, Font Awesome\ 5 Free Offline;
-    font-weight: 900;
+    /* font-family: Font Awesome\ 5 Free, Font Awesome\ 5 Free Offline; */
+    /* font-weight: 900; */
+    font-family: Radiance-regular !important;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -10979,13 +11005,15 @@ a.text-dark:hover {
 .container,
 body,
 html {
-    font-family: Lato, LatoOffline, sans-serif
+    /* font-family: Lato, LatoOffline, sans-serif */
+    font-family: Radiance-regular !important;
 }
 
 h1,
 h2 {
     text-shadow: 0 0 10px #ee4136;
-    font-family: 'PT Sans Caption', sans-serif;
+    /* font-family: 'PT Sans Caption', sans-serif; */
+    font-family: Radiance-regular !important;
     font-weight: 500;
     letter-spacing: 2px
 }
@@ -11136,7 +11164,8 @@ blockquote {
 
 .category-header h3 {
     color: white !important;
-    font-family: 'PT Sans Caption', sans-serif;
+    /* font-family: 'PT Sans Caption', sans-serif; */
+    font-family: Radiance-regular !important;
     text-shadow: 0 2px 10px #ee4136;
     text-transform: uppercase;
 }
@@ -11147,7 +11176,7 @@ td {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #12141c !important;
+    background-color: rgba(0, 0, 0, .2) !important;
 }
 
 h1,
