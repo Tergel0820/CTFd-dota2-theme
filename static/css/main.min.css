@@ -4125,14 +4125,21 @@ input[type=submit].btn-block {
 .nav-link {
     display: block;
     color: #757a82 !important;
-    padding: .5rem 1rem;
     text-shadow: none;
     transition: color 0.15s, text-shadow 0.15s
 }
 
+.dota2-nav-link-slash {
+    width: 2px;
+    height: 56px;
+    background-color: #000000;
+    transform: rotate(14deg);
+    box-shadow: 0 0 2px 0 #464646;
+}
+
 .nav-link:hover {
     color: #cad7f5 !important;
-    text-shadow: 0 0 5px #4e76bf !important;
+    text-shadow: 0 0 10px #4e76bf !important;
 }
 
 .nav-link:focus,
@@ -4204,6 +4211,11 @@ input[type=submit].btn-block {
     text-align: center
 }
 
+.nav-item {
+    display: flex;
+    align-items: center
+}
+
 .tab-content>.tab-pane {
     display: none
 }
@@ -4214,7 +4226,7 @@ input[type=submit].btn-block {
 
 .navbar {
     position: relative;
-    padding: .5rem 1rem
+    height: 56px
 }
 
 .navbar,
@@ -4228,13 +4240,45 @@ input[type=submit].btn-block {
 
 .navbar-brand {
     display: inline-block;
-    margin-right: 1rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
     color: #ee4136 !important;
     text-shadow: 0 2px 15px #ee4136;
-    filter: drop-shadow(0 0 12px #ee4136);
+    filter: drop-shadow(0 0 16px #ee4136);
+    margin-top: -66px;
+}
+
+
+.dota2-navbar-brand {
+    border-top: 62px solid #181d1f;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 150px;
+    height: 0;
+    filter: drop-shadow(0 0 6px #000);
+}
+
+.dota2-navbar-brand-1 {
+    position: absolute;
+    top: -64px;
+    border-top: 70px solid #191d20;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    width: 120px;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 6px #000);
+}
+
+.dota2-navbar-brand-line {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: #9b7153;
 }
 
 .navbar-brand:focus,
