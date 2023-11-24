@@ -3,6 +3,10 @@
     font-family: Radiance-regular;
     src: url("../fonts/radiance-regular.otf");
 }
+@font-face {
+    font-family: Trajan-regular;
+    src: url("../fonts/trajan-regular.ttf");
+}
 
 .hljs {
     display: block;
@@ -4135,6 +4139,7 @@ input[type=submit].btn-block {
 .nav-link {
     display: block;
     color: #757a82 !important;
+    font-family: Trajan-regular !important;
     text-shadow: none;
     padding: 4px;
     padding-bottom: 2px;
@@ -4153,6 +4158,15 @@ input[type=submit].btn-block {
 .nav-link:hover {
     color: #cad7f5 !important;
     text-shadow: 0 0 10px #4e76bf;
+}
+
+.nav-link img {
+    fill: #757a82 !important;
+    transition: fill 0.15s;
+}
+
+.nav-link:hover img {
+    fill: #cad7f5 !important;
 }
 
 .dota2-nav-link-sign-out {
@@ -4215,7 +4229,14 @@ input[type=submit].btn-block {
 }
 
 .nav-pills .nav-link {
-    border-radius: .25rem
+    font-family: Radiance-regular !important;
+    border-radius: .25rem;
+    color: #fff !important;
+    transition: text-shadow 0.15s;
+}
+
+.nav-pills:hover .nav-link:hover {
+    text-shadow: 0 0 5px #ee4136;
 }
 
 .nav-pills .nav-link.active,
