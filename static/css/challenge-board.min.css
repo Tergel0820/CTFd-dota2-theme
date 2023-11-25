@@ -23,7 +23,7 @@
 
 .challenge-button {
     border: solid 1px #ee4136cc;
-    background-color: transparent !important;
+    background-color: #16181a;
     box-shadow: 0px 0px 8px 0px #ee4136;
     border-radius: 2px;
     transition: border 0.15s, box-shadow 0.15s;
