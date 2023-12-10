@@ -4155,6 +4155,17 @@ input[type=submit].btn-block {
     margin-right: 8px;
 }
 
+@media only screen and (max-width: 480px) {
+    .dota2-nav-link-slash {
+        width: 0;
+        height: 0;
+    }
+    .navbar-collapse {
+        padding-top: 24px;
+        padding-bottom: 12px;
+    }
+}
+
 .nav-link:hover {
     color: #cad7f5 !important;
     text-shadow: 0 0 10px #4e76bf;
@@ -4357,6 +4368,7 @@ input[type=submit].btn-block {
 }
 
 .navbar-collapse {
+    background-color: #15171A;
     flex-basis: 100%;
     flex-grow: 1;
     align-items: center
